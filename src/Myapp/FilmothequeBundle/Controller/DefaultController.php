@@ -10,7 +10,8 @@ class DefaultController extends Controller
     
     public function indexAction()
     {
-        $message ="Premier message";
+        $em = $this->getDoctrine()->getManager();
+        $categorie = new Categorie();
         return $this->render('FilmothequeBundle:Default:index.html.twig', array('message' => $message));
     }
 }
