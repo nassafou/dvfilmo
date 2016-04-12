@@ -5,4 +5,21 @@ FilmothequeBundle_homepage:
 myapp_accueil:
     pattern:  /
     defaults: { _controller: FilmothequeBundle:Default:index }
+    
+myapp_acteur_lister:
+    pattern:  /auteur/
+    defaults: { _controller: FilmothequeBundle:Acteur:lister }
+    
+myapp_acteur_ajouter:
+    pattern:  /auteur/ajouter
+    defaults: { _controller: FilmothequeBundle:Acteur:ajouter }
+    
+myapp_acteur_modifier:
+    pattern:  /auteur/modifier/{id}
+    defaults: { _controller: FilmothequeBundle:Acteur:modifier }
+    
+myapp_acteur_supprimer:
+    pattern:  /auteur/supprimer/{id}
+    defaults: { _controller: FilmothequeBundle:Acteur:supprimer }
+
 
