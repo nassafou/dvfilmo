@@ -5,6 +5,7 @@ namespace Myapp\FilmothequeBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Myapp\FilmothequeBundle\Entity\Categorie;
 use Myapp\FilmothequeBundle\Entity\Acteur;
+use MyApp\FilmothequeBundle\Form\ActeurForm;
 
 
 class ActeurController extends Controller
@@ -20,6 +21,8 @@ class ActeurController extends Controller
     }
     public function ajouterAction()
     {
+        $acteur = new Acteur();
+        $form = $this->CreateForm(new ActeurForm(), $acteur);
     return $this->render('FilmothequeBundle:Acteur:ajouter.html.twig');
     }
     
